@@ -139,6 +139,13 @@ class TestApplication {
 
         // Actualizar información de progreso
         this.currentQuestionSpan.textContent = this.currentQuestionIndex + 1;
+
+        // Actualizar categoría de la pregunta
+        const categoryDiv = document.getElementById('questionCategory');
+        if (categoryDiv) {
+            categoryDiv.textContent = question.category;
+        }
+
         this.updateProgress();
 
         // Cargar texto de la pregunta
